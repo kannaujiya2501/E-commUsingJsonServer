@@ -1,0 +1,11 @@
+<div class="add-product">
+  <h1>Add New Vender</h1>
+  <p class="message-p">{{addProductMessage}}</p>
+  <form #addProduct="ngForm" (ngSubmit)="submit(addProduct.value)" class="common-form">
+    <input type="text" class="form-input" placeholder="Enter Username Name" name="name" ngModel />
+    <input type="text" class="form-input" placeholder="Enter Email " name="email" ngModel />
+    <input type="text" class="form-input" placeholder="Enter phone" name="password" ngModel />
+    <button class="form-button">Add vendor</button>     &nbsp;&nbsp;  <a routerLink="/adminhomepage"> Back to admin home page</a>
+
+  </form>
+</div>

@@ -1,0 +1,14 @@
+<div class="update-product">
+  <h1>Update Vender</h1>
+  <p class="message-p">{{productMessage}}</p>
+  <form #addVender="ngForm" (ngSubmit)="submit(addVender.value)" class="common-form">
+    <input type="text" class="form-input" placeholder="Enter user Name" name="name"
+      ngModel="{{venderData?.name}}" />
+    <input type="text" class="form-input" placeholder="Enter vender email" name="email"
+      ngModel="{{venderData?.email}}" />
+    <input type="text" class="form-input" placeholder="Enter vender phone" name="password"
+      ngModel="{{venderData?.password}}" />
+    <button class="form-button">Update Vender</button> &nbsp;&nbsp;  <a routerLink="/adminhomepage"> Back to admin home page</a>
+
+  </form>
+</div>

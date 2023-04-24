@@ -1,0 +1,30 @@
+<div class="product-list">
+  <!-- <h3><li><a routerLink="vendordetails">vendor</a></li></h3> -->
+
+  <h1>Vender List</h1>  &nbsp;&nbsp;   <li><a routerLink="/admin-add-vender">Add Vendor</a></li>
+  <p class="message-p">{{ productMessage }}</p>
+  <table>
+    <thead>
+      <tr>
+        <!-- <th>Vender id</th> -->
+        <th>Name</th>
+        <th>Email</th>
+        <th>phone</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of SignUpList">
+        <!-- <td>{{item.id }}</td> -->
+        <td>{{item.name }}</td>
+        <td>{{item.email }}</td>
+        <td>{{ item.password }}</td>
+        <td>
+          <fa-icon (click)="deleteAdmin(item.id)" [icon]="icon"></fa-icon>
+          <a class="adjust-update-link" routerLink="/admin-update-vender/{{item.id}}"> <fa-icon  [icon]="iconEdit"></fa-icon></a>
+
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
